@@ -46,3 +46,5 @@ Test your new function; I've provided some basic testing code in `code.test.js`.
 What is the worst-case asymptotic time complexity of your implementation? What
 is the worst-case asymptotic memory complexity? Add your answer, including your
 reasoning, to this markdown file.
+
+Answer: The worst case time complexity of the Held-Karp algorithm is O(n² * 2ⁿ) where n is the number of cities. This is because there are 2^n subsets of cities and for each subset results are computed for n possible current positions with up to n transitions evaluated per state. The worst case memory complexity is O(n * 2ⁿ) as the algorithm stores results for n⋅2^n states in the memoization table. While the recursion depth adds an O(n) stack overhead. While efficient for small inputs, the exponential growth makes this algorithm impractical for large numbers of cities.
