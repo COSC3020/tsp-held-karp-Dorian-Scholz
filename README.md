@@ -46,3 +46,5 @@ Test your new function; I've provided some basic testing code in `code.test.js`.
 What is the worst-case asymptotic time complexity of your implementation? What
 is the worst-case asymptotic memory complexity? Add your answer, including your
 reasoning, to this markdown file.
+
+Answer: Analysis: The worst case is O(n^22^n). This is because the algorithm evaluates 2^n subsets of cities and for each subset it computes the shortest path ending at all n possible cities requiring O(n) transitions. The worst case memory complexity is O(n*2^n) because the memoization table which stores results for each subset of cities and each ending city. The recursion stack requires O(n) space but this is dominated by the memoization storage. The implementation efficiently balances time and memory for solving the salesperson problem with the Held-Karp algorithm.
